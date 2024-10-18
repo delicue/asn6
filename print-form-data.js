@@ -6,6 +6,6 @@ function printFormData() {
   formDataOutput.textContent = '';
   formData.forEach((v, k, data) => {
     formDataOutput.append(`${k}: ${v?v:null}`);
-    formDataOutput.textContent += '<br>';
+    formDataOutput.innerHTML += '<br>';
   })
 }
