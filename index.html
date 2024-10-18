@@ -7,7 +7,7 @@
     <title>Assignment 6</title>
 </head>
 <body>
-    <form>
+    <form id="formPI">
         <fieldset>
             <legend>Personal Information</legend>
             
@@ -57,7 +57,11 @@
             
             <input type="submit" value="Submit">
             <input type="reset" value="Reset">
+            <input type="button" value="Print Form Data" onclick="printFormData()">
         </fieldset>
     </form>
+    <div id="formDataOutput"></div>
+
+    <script src="print-form-data.js"></script>
 </body>
 </html>

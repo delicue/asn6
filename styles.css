@@ -58,6 +58,7 @@ input[type="range"] {
 }
 
 input[type="submit"],
+input[type="button"],
 input[type="reset"] {
     background-color: #007BFF;
     color: white;
@@ -69,6 +70,19 @@ input[type="reset"] {
 }
 
 input[type="submit"]:hover,
+input[type="button"]:hover,
 input[type="reset"]:hover {
     background-color: #0056b3;
+    transition-duration:300ms;
+    opacity: 0.80;
+}
+
+input[type="submit"]:active,
+input[type="button"]:active,
+input[type="reset"]:active {
+    transition-duration: 50ms;
+    opacity: 1.00;
+    border-width: 2px;
+    box-shadow: 1px 2px 2px black;
+    filter: blur(0.1rem)
 }
