@@ -86,3 +86,8 @@ input[type="reset"]:active {
     box-shadow: 1px 2px 2px black;
     filter: blur(0.1rem)
 }
+
+input[type="radio"],
+option {
+    
+}

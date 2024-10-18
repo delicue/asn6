@@ -7,34 +7,40 @@
     <title>Assignment 6</title>
 </head>
 <body>
-    <form id="formPI">
+    <form id="formPI" autocomplete="on">
         <fieldset>
             <legend>Personal Information</legend>
             
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username"><br><br>
+            <input type="text" autocomplete="username" id="username" name="username"><br><br>
             
             <label for="password">Password:</label>
             <input type="password" id="password" name="password"><br><br>
             
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email"><br><br>
+            <input type="email" autocomplete="email" id="email" name="email"><br><br>
             
-            <label>Gender:</label><br>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label><br>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label><br>
-            <input type="radio" id="other" name="gender" value="other">
-            <label for="other">Other</label><br><br>
+            <div>
+                <h2>Gender:</h2>
+                <nav>
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                </nav>
+                <div>
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                </div>
+                <label for="other">Other</label>
+                <input type="radio" id="other" name="gender" value="other">
+            </div>
             
-            <label for="color">Favorite Color:</label>
-            <input type="color" id="color" name="color"><br><br>
+            <h2>Favorite Color:</h2>
+            <input aria-label="Color" type="color" id="color" name="color"><br><br>
             
             <label for="bio">Bio:</label><br>
             <textarea id="bio" name="bio" rows="4" cols="50"></textarea><br><br>
             
-            <label>Hobbies:</label><br>
+            <h2>Hobbies:</h2>
             <input type="checkbox" id="sports" name="hobbies" value="sports">
             <label for="sports">Sports</label><br>
             <input type="checkbox" id="music" name="hobbies" value="music">
@@ -43,21 +49,23 @@
             <label for="reading">Reading</label><br><br>
             
             <label for="age">Age Range:</label>
-            <input type="range" id="age" name="age" min="0" max="100"><br><br>
+            <input type="range" id="age" name="age" min="0" max="100">
             
             <label for="profile-pic">Profile Picture:</label>
             <input type="file" id="profile-pic" name="profile-pic"><br><br>
             
-            <label for="country">Country:</label>
-            <select id="country" name="country">
-                <option value="usa">USA</option>
-                <option value="canada">Canada</option>
-                <option value="uk">UK</option>
-            </select><br><br>
+            <label>Country:
+                <select id="country" autocomplete="country" name="country">
+                    <option value="usa">USA</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">UK</option>
+                </select><br>
+            </label>
             
-            <input type="submit" value="Submit">
+            <label for="submit" hidden>Submit</label>
+            <input id="submit" type="submit" value="Submit"></label>
             <input type="reset" value="Reset">
-            <input type="button" value="Print Form Data" onclick="printFormData()">
+            <button onclick="printFormData()">Print Form Data</button>
         </fieldset>
     </form>
     <div id="formDataOutput"></div>
