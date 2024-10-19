@@ -1,19 +1,18 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0;
 }
 
-form {
+#formPI {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 500px;
+    max-width: 800px;
+    justify-items: center;
+    margin: 3rem auto;
 }
 
 fieldset {
@@ -36,7 +35,6 @@ label {
 input[type="text"],
 input[type="password"],
 input[type="email"],
-input[type="color"],
 input[type="file"],
 textarea,
 select {
@@ -57,6 +55,7 @@ input[type="range"] {
     width: 100%;
 }
 
+button,
 input[type="submit"],
 input[type="button"],
 input[type="reset"] {
@@ -69,6 +68,7 @@ input[type="reset"] {
     margin-right: 10px;
 }
 
+button:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover {
@@ -77,6 +77,7 @@ input[type="reset"]:hover {
     opacity: 0.80;
 }
 
+button:active,
 input[type="submit"]:active,
 input[type="button"]:active,
 input[type="reset"]:active {
@@ -87,7 +88,15 @@ input[type="reset"]:active {
     filter: blur(0.1rem)
 }
 
-input[type="radio"],
+/* input[type="radio"],
 option {
     
+} */
+
+#formDataOutput {
+    background-color: white;
+    padding: 5px 2px;
+    margin: 0 auto;
+    place-items: center;
+    text-align: center;
 }
